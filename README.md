@@ -33,7 +33,7 @@ A simple settings manager that lets you add, update, delete, and view user confi
   - Returns `"No settings available."` if the dictionary is empty
   - Otherwise returns a formatted, multi-line summary with each key capitalized
 
-# Budget App
+### 2.Budget App
 
 A command-line budgeting tool built with Python. Create spending categories, track deposits and withdrawals, transfer funds between categories, and visualize spending with a bar chart.
 
