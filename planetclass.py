@@ -1,4 +1,7 @@
-"""You should create a class named Planet.
+"""
+LAB
+
+You should create a class named Planet.
 The Planet class should have an __init__ method that:
 Has four parameters: self, name, planet_type, and star.
 Raises a TypeError with the message name, planet type, and star must be strings if any of the arguments passed in is not a string type.
