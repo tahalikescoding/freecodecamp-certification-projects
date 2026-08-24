@@ -33,6 +33,10 @@ A simple settings manager that lets you add, update, delete, and view user confi
   - Returns `"No settings available."` if the dictionary is empty
   - Otherwise returns a formatted, multi-line summary with each key capitalized
 
+### 2. RPG Character Builder
+`rpgcharacter.py`
+
+A character creation system for a text-based RPG, with input validation and a stat-rating display built from dot characters.
 
 ## 🛠️ Tech Stack
 - Python 3
