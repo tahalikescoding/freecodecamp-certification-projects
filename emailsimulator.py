@@ -1,3 +1,7 @@
+"""
+LAB 2
+"""
+
 import datetime
 
 class Email:
