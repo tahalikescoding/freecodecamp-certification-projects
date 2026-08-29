@@ -75,6 +75,8 @@ class Rectangle:
         return rect
 
     def get_amount_inside(self , shape):
+        if shape.height<self.height and shape.width<self.width:
+            return 0
         otherarea = shape.get_area()
         area = self.get_area()
         number = area//otherarea
