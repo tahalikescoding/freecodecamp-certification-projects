@@ -4,7 +4,7 @@ All the certification projects and labs from the freeCodeCamp Python certificati
 
 ## 📂 Projects
 
-### 1. User Config Manager
+### Certification Project 1. User Config Manager
 `useronfigmanager.py`
 
 A simple settings manager that lets you add, update, delete, and view user configuration settings stored in a dictionary. Built around string formatting, dictionary operations, and key/value normalization.
@@ -33,7 +33,7 @@ A simple settings manager that lets you add, update, delete, and view user confi
   - Returns `"No settings available."` if the dictionary is empty
   - Otherwise returns a formatted, multi-line summary with each key capitalized
 
-### 2.Budget App
+### Certification Project 2. Budget App
 
 A command-line budgeting tool built with Python. Create spending categories, track deposits and withdrawals, transfer funds between categories, and visualize spending with a bar chart.
 
@@ -100,11 +100,41 @@ print(food)
 print(create_spend_chart([food, entertainment]))
 ```
 
-## Notes / Gotchas
+### Certification Project 3. Rectangle / Square Calculator (OOP Inheritance)
 
-- `create_spend_chart` output must match **exactly** — every column (bars, dashes, category names) must use the same fixed width. A mismatch of even one space will fail the automated checks even if the percentages are calculated correctly.
-- Percentages are rounded **down** to the nearest 10 (not standard rounding).
-- The final line of the chart should not have a trailing newline (`rstrip("\n")`).
+A freeCodeCamp Scientific Computing certification project demonstrating class inheritance in Python. Implements a `Rectangle` class and a `Square` subclass that inherits and overrides its parent's behavior.
+
+## Classes
+
+### `Rectangle`
+
+Created with a `width` and `height`.
+
+| Method | Description |
+|---|---|
+| `set_width(value)` | Sets the width. Raises `ValueError` for negative or non-numeric input. |
+| `set_height(value)` | Sets the height. Same validation as above. |
+| `get_area()` | Returns `width × height`. |
+| `get_perimeter()` | Returns `2 × (width + height)`. |
+| `get_diagonal()` | Returns `√(width² + height²)`. |
+| `get_picture()` | Returns an ASCII-art string of `*` characters — `height` rows of `width` stars each. Returns `"Too big for picture."` if either dimension exceeds 50. |
+| `get_amount_inside(shape)` | Returns how many times another shape's area fits inside this one's area. |
+| `__repr__` | `Rectangle(width=5, height=10)` |
+
+### `Square(Rectangle)`
+
+Subclasses `Rectangle`. Created with a single `length`, which sets both `width` and `height` via `super().__init__()`.
+
+| Method | Description |
+|---|---|
+| `set_width(value)` | Overridden — sets **both** width and height to keep it square. |
+| `set_height(value)` | Overridden — same behavior as `set_width`. |
+| `set_side(value)` | Sets both width and height directly. |
+| `__repr__` | Overridden — `Square(side=9)` |
+
+All of `Rectangle`'s other methods (`get_area`, `get_perimeter`, `get_diagonal`, `get_picture`, `get_amount_inside`) are inherited unchanged, since a square's area/perimeter/diagonal math works identically once width and height are equal.
+
+
 
 ## 🛠️ Tech Stack
 - Python 3
